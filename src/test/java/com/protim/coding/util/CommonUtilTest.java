@@ -16,4 +16,12 @@ class CommonUtilTest {
         Assertions.assertTrue(CommonUtil.isPallindrome("abccba"));
     }
 
+    @Test
+    void mergeAlternatelyTest(){
+        Assertions.assertEquals("abc", CommonUtil.mergeAlternately("a", "bc"));
+        Assertions.assertEquals("acb", CommonUtil.mergeAlternately("ab", "c"));
+        Assertions.assertEquals("adbecf", CommonUtil.mergeAlternately("abc", "def"));
+        Assertions.assertEquals("apbqrs", CommonUtil.mergeAlternately("ab", "pqrs"));
+    }
+
 }
